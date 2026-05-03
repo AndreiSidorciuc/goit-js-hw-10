@@ -40,7 +40,7 @@ flatpickr(input, {
   },
 });
 
-// Start button
+// Start button///////////////////////////////////////////////
 startBtn.addEventListener('click', () => {
   event.preventDefault();
   startBtn.disabled = true;
