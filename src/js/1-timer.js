@@ -7,13 +7,15 @@ import 'izitoast/dist/css/iziToast.min.css';
 let userSelectedDate = null;
 let timerId = null;
 
-const startBtn = document.querySelector('[data-start]');
 const input = document.querySelector('#datetime-picker');
-
 const daysEl = document.querySelector('[data-days]');
 const hoursEl = document.querySelector('[data-hours]');
 const minutesEl = document.querySelector('[data-minutes]');
 const secondsEl = document.querySelector('[data-seconds]');
+const startBtn = document.querySelector('[data-start]');
+
+// // 🔥 важливо: завжди задаємо стан тут
+startBtn.disabled = true;
 
 // Flatpickr
 flatpickr(input, {
@@ -40,7 +42,7 @@ flatpickr(input, {
   },
 });
 
-// Start button///////////////////////////////////////////////
+// Start button//
 startBtn.addEventListener('click', () => {
   startBtn.disabled = true;
   input.disabled = true;
