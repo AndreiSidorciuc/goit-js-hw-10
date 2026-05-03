@@ -42,7 +42,6 @@ flatpickr(input, {
 
 // Start button///////////////////////////////////////////////
 startBtn.addEventListener('click', () => {
-  event.preventDefault();
   startBtn.disabled = true;
   input.disabled = true;
 
@@ -53,7 +52,6 @@ startBtn.addEventListener('click', () => {
     if (diff <= 0) {
       clearInterval(timerId);
       updateTimer(0);
-
       input.disabled = false;
       return;
     }
